@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgr2tfdbhhdb1"]
+
+[ext_resource type="Script" path="res://PlayerPhysics.gd" id="1_qp3fq"]
+[ext_resource type="Texture2D" uid="uid://c3tuh8kh52cuj" path="res://Sprites/PhysicsCharacter.png" id="1_y1squ"]
+[ext_resource type="PackedScene" uid="uid://div7pp121h6lx" path="res://Crate.tscn" id="3_kvu8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2qv1"]
+size = Vector2(18, 18)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+mass = 5.0
+gravity_scale = 0.0
+linear_damp = 2.0
+script = ExtResource("1_qp3fq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_y1squ")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_f2qv1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Crate" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-4, 113)
+
+[node name="Crate2" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-200, 54)
+
+[node name="Crate3" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-182, -86)
+
+[node name="Crate4" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-187, -36)
+
+[node name="Crate5" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-174, -1)
+
+[node name="Crate6" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-5, -92)
+
+[node name="Crate7" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(67, -79)
+
+[node name="Crate8" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(-61, -51)
+
+[node name="Crate9" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(143, 4)
+
+[node name="Crate10" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(132, 52)
+
+[node name="Crate11" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(121, -39)
+
+[node name="Crate12" parent="." instance=ExtResource("3_kvu8a")]
+position = Vector2(73, 85)

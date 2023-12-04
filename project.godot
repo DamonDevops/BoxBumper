@@ -12,8 +12,9 @@ config_version=5
 
 config/name="BoxBumper"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
